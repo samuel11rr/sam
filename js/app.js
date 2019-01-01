@@ -56,12 +56,24 @@ function borraTexto(texto){
     }
 
     if ( contadorTexto > repeticiones ) {
-        document.getElementById('subtitulo').style.visibility='visible';
-        return;
+        return subtitulo();
     };
 }
 
+function subtitulo(){
+    let encabezado = document.getElementById('encabezado');
+    let subtitulo = document.createElement('h3');
+    let iam = document.getElementById('iam');
+    let newiam = iam;
 
+    newiam.classList.add('animated', 'slideInUp');
+    subtitulo.classList.add('white-text', 'subtitulo', 'animated', 'slideInUp');
+    subtitulo.innerHTML = 'Web Developer';
+    
+    encabezado.removeChild(iam);
+    encabezado.appendChild(newiam);
+    encabezado.appendChild(subtitulo);
+}
 
 
 /******************************************
