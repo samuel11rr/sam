@@ -10,6 +10,29 @@ main {
     flex: 1 0 auto;
 }
 
+.opt-menu:hover{
+    background-color: #212121;
+}
+
+.opt-menu:hover a{
+    color: #26c6da;
+}
+
+.header-global{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.header-particles{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
 .txtCursor{
     font-weight: lighter;
     opacity: 0.6;

@@ -29,12 +29,12 @@ function textoPrincipal( texto ){
 
         setTimeout(function(){
             textoPrincipal(texto);
-        }, 100);
+        }, 70);
     }
     else{
         setTimeout(function(){
             borraTexto(texto);
-        }, 700);
+        }, 1500);
     }
 }
 
@@ -47,11 +47,11 @@ function borraTexto(texto){
     
             setTimeout(function(){
                 borraTexto(texto);
-            }, 70);
+            }, 50);
         }else{
             setTimeout(function(){
                 cambiaTextoPrincipal();
-            }, 700);
+            }, 500);
         }
     }
 
