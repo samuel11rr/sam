@@ -1,0 +1,26 @@
+/* ESTILOS PERSONALIZADOS */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.txtCursor{
+    font-weight: lighter;
+    opacity: 0.6;
+}
+
+.h1-sm{
+    font-size: 3.0em;
+}
+
+.subtitulo{
+    font-variant: small-caps;
+    font-size: 2.0em;
+    visibility: hidden;
+}

@@ -1,8 +1,15 @@
-(function($){
-  $(function(){
+/*AQUI VAN LOS INICIADORES DE MATERIALIZE*/
 
-    $('.button-collapse').sideNav();
-    $('.parallax').parallax();
+/* Iniciador de sidenav */
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {
+        edge: 'right'
+    });
+  });
 
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+/* Iniciador de parallax */
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems, {});
+});
