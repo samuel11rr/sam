@@ -3,14 +3,14 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
+    <!-- Import material design icons -->
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/3.4.93/css/materialdesignicons.min.css">
+    <!-- Import materialize.css -->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animate.css">
 
-    <!--Let browser know website is optimized for mobile-->
+    <!-- Let browser know website is optimized for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <meta name="theme-color" content="#000000">
@@ -30,7 +30,7 @@
                             <img src="img/favicon.png" width="20em">
                             <span style="font-weight: lighter; font-variant: small-caps">SamuelR</span>
                         </a>
-                        <a href="#" data-target="mobile-demo" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
+                        <a href="#" data-target="mobile-demo" class="right sidenav-trigger"><span class="mdi mdi-menu"></span></a>
                         <ul class="right hide-on-med-and-down">
                             <li class="waves-effect waves-light opt-menu"><a href="#home">Home</a></li>
                             <li class="waves-effect waves-light opt-menu"><a href="#contact">Contacto</a></li>
@@ -58,21 +58,32 @@
                 <div class="parallax"><img src="img/w9.jpg" style="filter:brightness(30%)"></div>
             </div>
 
-            <div class="section">
+            <!-- About me -->
+            <div class="section black">
                 <div class="container">
                     <div class="row">
                         <div class="col s12 m6">
                             <img src="img/pp.jpg" class="responsive-img" style="filter:grayscale(100%)">
                         </div>
 
-                        <div class="col s12 m6">
+                        <div class="col s12 m6 white-text">
                             <h3>Acerca de mí</h3>
+                            <p>
+                                Actualmente trabajo en <a href="https://medicavial.com/" target="_blank">MédicaVial</a> como desarrollador backend y frontend en distintos proyectos.
+                            </p>
+                            <p>A la par, trabajo como desarrollador freelance.</p>
+                            <p>
+                                <a class="waves-effect waves-light btn-flat white-text" href="https://www.instagram.com/samuel.codes/" target="_blank">
+                                    <i class="mdi mdi-instagram mdi-36px"></i>
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="parallax-container">
-                        <div class="parallax"><img src="img/2.jpg" style="filter: brightness(20%)"></div>
-                      </div>
+            </div>
+
+            <div class="parallax-container">
+                    <div class="parallax"><img src="img/2.jpg" style="filter: brightness(20%)"></div>
             </div>
 
 
@@ -88,14 +99,14 @@
                     <form name="formulario" action="javascript:;" onsubmit="envia(this)" id="formContacto">
                         <div class="row">
                         <div class="input-field col s12 m6">
-                            <i class="material-icons prefix">mode_edit</i>
+                            <i class="mdi mdi-pencil prefix"></i>
                             <textarea id="icon_prefix2" class="materialize-textarea" name="mensaje" required></textarea>
                             <label for="icon_prefix2">Mensaje</label>
                         </div>
 
                         <div class="col s12 m6">
                             <div class="input-field">
-                            <i class="material-icons prefix">email</i>
+                            <i class="mdi mdi-email prefix"></i>
                             <input id="email" type="email" class="validate" name="email" required>
                             <label for="email">Email</label>
                             </div>
@@ -103,7 +114,7 @@
 
                         <div class="center">
                             <button class="btn waves-effect waves-light cyan darken-1" type="submit" name="action" id="btnEnvia">Enviar
-                            <i class="material-icons right">send</i>
+                            <i class="mdi mdi-send right"></i>
                             </button>
                         </div>
                         </div>
