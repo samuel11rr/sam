@@ -46,3 +46,12 @@ main {
     font-variant: small-caps;
     font-size: 2.0em;
 }
+
+.social-link:hover{
+    /* color: #eceff1 !important; */
+    color: #fffde7 !important;
+}
+
+.external-link:hover{
+    color: #ffe082 !important;
+}

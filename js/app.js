@@ -83,3 +83,11 @@ let altura = window.innerHeight-56;
 let plxElement = document.getElementById('parallax-principal');
 
 plxElement.style.height = altura+'px';
+
+
+/******************************************
+ * TEXTO COPYRIGHT
+ *****************************************/
+let copyrightText = `Samuel Ramírez | CDMX 2016 - ${ new Date().getFullYear() }`;
+let copyrightElem = document.getElementById('copyright-text');
+copyrightElem.innerText = copyrightText;
