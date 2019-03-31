@@ -27,12 +27,13 @@
                 <nav class="black">
                     <div class="nav-wrapper container">
                         <a href="#home" class="brand-logo">
-                            <img src="img/favicon.png" width="20em">
+                            <img src="img/favicon.png" width="20em" class="hide-on-small-only">
                             <span style="font-weight: lighter; font-variant: small-caps">SamuelR</span>
                         </a>
                         <a href="#" data-target="mobile-demo" class="right sidenav-trigger"><span class="mdi mdi-menu"></span></a>
                         <ul class="right hide-on-med-and-down">
                             <li class="waves-effect waves-light opt-menu"><a href="#home">Home</a></li>
+                            <li class="waves-effect waves-light opt-menu"><a href="#about-me">Acerca de mí</a></li>
                             <li class="waves-effect waves-light opt-menu"><a href="#contact">Contacto</a></li>
                         </ul>
                     </div>
@@ -41,6 +42,7 @@
 
             <ul class="sidenav" id="mobile-demo">
                 <li><a href="#home" class="sidenav-close">Home</a></li>
+                <li><a href="#about-me" class="sidenav-close">Acerca de mí</a></li>
                 <li><a href="#contact" class="sidenav-close">Contacto</a></li>
             </ul>
         </header>
@@ -59,26 +61,36 @@
             </div>
 
             <!-- About me -->
+            <a name="about-me" id="about-me"></a>
             <div class="section black">
+
+                <div class="espacio"></div> 
+                
                 <div class="container">
                     <div class="row">
-                        <div class="col s12 m6">
-                            <img src="img/pp.jpg" class="responsive-img circle" style="filter:grayscale(100%)">
+                        <div class="col s12 m5">
+                            <img src="img/pp.jpg" class="responsive-img circle" style="filter:grayscale(80%)">
                         </div>
 
-                        <div class="col s12 m6 white-text">
-                            <h3>Acerca de mí</h3>
+                        <div class="col s12 m7 grey-text text-lighten-1">
+                            <h3 style="font-weight: lighter; font-variant: small-caps">Acerca de mí</h3>
+                            <p>
+                                Mi nombre es Samuel Ramírez y soy Desarrollador Web.
+                                Tengo mas de 10 años maquetando y 4 programando. 
+                                Además de desarrollar con HTML5, CSS3, Javascript y PHP como tecnologías base,
+                                utilizo framworks como Angular, Vue.js, Node.js y Laravel.
+                            </p>
                             <p>
                                 Actualmente trabajo en 
                                 <a  href="https://medicavial.com/" 
-                                    class="white-text external-link" 
+                                    class="grey-text text-lighten-1 external-link" 
                                     target="_blank">
                                     MédicaVial
                                     <i class="mdi mdi-open-in-new"></i>
                                 </a> 
                                 como desarrollador backend y frontend en distintos proyectos.
+                                A la par, soy desarrollador freelance.
                             </p>
-                            <p>A la par, soy desarrollador freelance.</p>
                             <p>
                                 <a  class="social-link grey-text text-darken-1 waves-effect" 
                                     href="https://github.com/samuel11rr" 
@@ -115,13 +127,94 @@
                 </div>
             </div>
 
+            <div class="parallax-container valign-wrapper" id="contadores">
+                <div class="parallax"><img src="img/1.jpg" style="filter: brightness(30%);"></div>
+
+                <div class="container">
+                    <div class="row white-text">
+                        <div class="col s6 m3 center hide-on-small-only">
+                            <h2><i class="mdi mdi-clock-outline"></i></h2>
+                            <h5 id="horas-trabajo">0</h5>
+                            <h6>Horas de trabajo</h6>
+                        </div>
+
+                        <div class="col s6 m3 center hide-on-small-only">
+                            <h2><i class="mdi mdi-laptop"></i></h2>
+                            <h5 id="proyectos-terminados">0</h5>
+                            <h6>Proyectos terminados</h6>
+                        </div>
+
+                        <div class="col s6 m3 center">
+                            <h2><i class="mdi mdi-code-tags"></i></h2>
+                            <h5 id="lineas-codigo">0</h5>
+                            <h6>Líneas de código</h6>
+                        </div>
+
+                        <div class="col s6 m3 center">
+                            <h2><i class="mdi mdi-coffee"></i></h2>
+                            <h5 id="tazas-cafe">0</h5>
+                            <h6>Tazas de café</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About me -->
+            <a name="about-me" id="about-me"></a>
+            <div class="section black">
+
+                <div class="espacio"></div> 
+                
+                <div class="container">
+                    <div class="row">
+                        <h3 style="font-weight: lighter; font-variant: small-caps" 
+                            class="grey-text text-lighten-1">
+                            Proyectos recientes
+                        </h3>
+
+                        <div class="col s12 grey-text text-lighten-1">
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas facere iusto eum, voluptatem minima ab. Magnam fugiat, vero eius delectus nesciunt ab omnis sit aut, deleniti quis beatae cupiditate soluta!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="parallax-container valign-wrapper">
+                <div class="parallax"><img src="img/1.jpg" style="filter: brightness(50%);"></div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="carousel" id="carousel-tech">
+                            <a class="carousel-item"><img src="img/tech/laravel.png" class="responsive-img img-tech"></a>
+                            <a class="carousel-item"><img src="img/tech/angular.png" class="responsive-img img-tech"></a>
+                            <a class="carousel-item"><img src="img/tech/vue.png" class="responsive-img img-tech"></a>
+                            <a class="carousel-item"><img src="img/tech/pwa.png" class="responsive-img img-tech"></a>
+                            <a class="carousel-item"><img src="img/tech/html5.png" class="responsive-img img-tech"></a>
+                            <a class="carousel-item"><img src="img/tech/css3.png" class="responsive-img img-tech"></a>
+                            <a class="carousel-item"><img src="img/tech/js.png" class="responsive-img img-tech"></a>
+                            <a class="carousel-item"><img src="img/tech/php.png" class="responsive-img img-tech"></a>
+                            <a class="carousel-item"><img src="img/tech/nodejs.png" class="responsive-img img-tech"></a>
+                            <a class="carousel-item"><img src="img/tech/mysql.png" class="responsive-img img-tech"></a>
+                            <a class="carousel-item"><img src="img/tech/sqlserver.png" class="responsive-img img-tech"></a>
+                            <a class="carousel-item"><img src="img/tech/mongodb.png" class="responsive-img img-tech"></a>
+                          </div>
+                    </div>
+                </div>
+            </div> -->
+
             <a name="contact" id="contact"></a>
             <div class="parallax-container valign-wrapper">
                 <div class="parallax"><img src="img/2.jpg" style="filter: brightness(15%)"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col s12">
-                            <h4 class="white-text">Contacto</h4>
+                            <h3 style="font-weight: lighter; font-variant: small-caps" 
+                                class="grey-text text-lighten-1">
+                                Contacto
+                            </h3>
+                            
                             <form name="formulario" action="javascript:;" onsubmit="envia(this)" id="formContacto">
                                 <div class="row">
                                     <div class="input-field col s12 m6">

@@ -10,6 +10,10 @@ main {
     flex: 1 0 auto;
 }
 
+.espacio{
+    height: 30px;
+}
+
 .opt-menu:hover{
     background-color: #212121;
 }
@@ -54,4 +58,12 @@ main {
 
 .external-link:hover{
     color: #ffe082 !important;
+}
+
+.img-bw{
+    filter: grayscale(0%);
+}
+
+.img-tech{
+    max-height: 250px;
 }
