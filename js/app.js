@@ -123,7 +123,8 @@ let contadoresX = contadoresElem.offsetTop;
 let altoPantalla = window.innerHeight;
 let alturaDisparaA = contadoresX-(Math.round(altoPantalla/2));
 let alturaDisparaB = contadoresX+(Math.round(altoPantalla/2));
-// console.log(alturaDisparaA, alturaDisparaB);
+// alturaPantalla, alturaDiv, alturaA, AlturaB
+// console.log(altoPantalla, contadoresX, alturaDisparaA, alturaDisparaB);
 
 let aniosTotales = (new Date().getFullYear())-(new Date('2016').getFullYear()+1);
 let diasTrabajadosXanio = 20*12;
@@ -141,7 +142,7 @@ let contadoresVisible = false;
 document.addEventListener('scroll', function(){
     // console.log(window.pageYOffset);
     
-    if( !contadoresVisible && (window.pageYOffset >= alturaDisparaA || window.pageYOffset <= alturaDisparaA) ){
+    if( !contadoresVisible && (window.pageYOffset >= alturaDisparaA && window.pageYOffset <= alturaDisparaB) ){
         // console.log('ES AQUI');
         contadoresVisible = true;
         activaContadores();
