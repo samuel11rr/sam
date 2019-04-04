@@ -76,11 +76,13 @@ main {
     overflow: hidden;
     margin: 0.8em 0 0.8em 0;
 }
+
 .overlay-image {
     display: block;
     width: 100%;
     height: auto;
 }
+
 .overlay-content {
     position: absolute;
     top: 0;
@@ -93,9 +95,11 @@ main {
     transition: .5s ease;
     background-color: #008CBA;
 }
+
 .overlay-container:hover .overlay-content {
     opacity: 1;
 }
+
 .overlay-text {
     color: white;
     font-size: 20px;
@@ -106,4 +110,11 @@ main {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+.overlay-container {
+
+    height: 200px;
+}
 }
