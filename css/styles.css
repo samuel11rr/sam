@@ -81,6 +81,8 @@ main {
     display: block;
     width: 100%;
     height: auto;
+    filter: blur(2.5px) grayscale(50%) brightness(40%);
+    transition: .5s ease;
 }
 
 .overlay-content {
@@ -91,18 +93,16 @@ main {
     right: 0;
     height: 100%;
     width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
-}
-
-.overlay-container:hover .overlay-content {
     opacity: 1;
+    transition: .5s ease;
+    /* background-color: #008CBA; */
 }
 
 .overlay-text {
     color: white;
-    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: lighter;
+    font-size: 1.5em;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -112,9 +112,33 @@ main {
     text-align: center;
 }
 
-@media only screen and (max-width: 992px) {
-.overlay-container {
-
-    height: 200px;
+.overlay-content{
+    opacity: 1;
 }
+.overlay-image{
+    filter: blur(2.5px) grayscale(50%) brightness(40%);
+} 
+
+/* overlay va a reaccionar al mouse-over solo en pantallas grandes */
+@media only screen and (min-width: 993px) {
+    .overlay-container:hover .overlay-content {
+        opacity: 0;
+    }
+    
+    .overlay-container:hover .overlay-image {
+        filter: blur(0px) grayscale(0%) brightness(100%);
+        transition: .5s ease;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .overlay-container {
+        height: 250px;
+    }    
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    .overlay-container {
+        height: 150px;
+    }
 }

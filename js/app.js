@@ -86,6 +86,24 @@ plxElement.style.height = altura+'px';
 
 
 /******************************************
+ * AGREGAMOS ESTILOS DEPENDIENDO EL ANCHO DE LA PANTALLA
+ *****************************************/
+let anchoPantalla = window.innerWidth;
+let aboutContainer = document.getElementById('about-container');
+
+if (anchoPantalla > 600) aboutContainer.classList.add('valign-wrapper');
+
+window.addEventListener('resize', () => {
+    anchoPantalla = window.innerWidth;
+    if (anchoPantalla > 600) {
+        aboutContainer.classList.add('valign-wrapper');
+    } else {
+        aboutContainer.classList.remove('valign-wrapper');
+    }
+})
+
+
+/******************************************
  * TEXTO COPYRIGHT
  *****************************************/
 let copyrightText = `Samuel Ramírez | CDMX 2016 - ${ new Date().getFullYear() }`;
