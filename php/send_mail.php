@@ -1,23 +1,20 @@
 <?php
-	# Get JSON as a string
 	$datos_str = file_get_contents('php://input');
-	# Get as an object
 	$datos_obj = json_decode( $datos_str );
 
 	$mensaje 	= limpiastring( $datos_obj->mensaje );
 	$contacto 	= limpiastring( $datos_obj->contacto );
 	
-	// Create the email and send the message
 	$to = 'samuel_ramirez@live.com.mx';
 	$email_subject = "Solicitud de informacion";
 	$email_body = "Se ha solicitado informacion\n";
 	$email_body.= $mensaje."\n";
 	$email_body.= "From: ".$contacto;
 
-	$headers = 'From: sramirez.hol.es <no-reply@sramirez.hol.es>' . "\r\n";
+	$headers = 'From: samuel-ramirez.com <no-reply@samuel-ramirez.com>' . "\r\n";
 	// $headers .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-	// $headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
-	// $headers .= 'Bcc: samuel11rr@gmail.com' . "\r\n";
+	// if( $contacto != '' ) $headers .= 'Cc:' . $contacto . "\r\n";
+	// $headers .= 'Bcc: samuel@mail.com' . "\r\n";
 
 	try {
 		if ($mensaje != '' && $contacto != '') {
@@ -32,7 +29,6 @@
 	}
 
 	echo json_encode( $respuesta );
-
 
 	function limpiastring( $dato ){
 	    $noPermitidos = array("'", '\\', '<', '>', "\"");
