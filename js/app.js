@@ -230,3 +230,43 @@ function contadorTazas( iteracion=0 ){
         }
     }, 5);
 }
+
+
+/******************************************
+ * FORMULARIO DE CONTACTO
+ *****************************************/
+function sendMessage(){
+    let btnEnvia = document.getElementById('btnEnvia');
+    btnEnvia.classList.add('disabled');
+
+    let datos = {
+      mensaje: document.forms["formulario"]['mensaje'].value,
+      contacto: document.forms["formulario"]['email'].value
+    }
+
+    let headers = { 'Content-Type': 'application/json' };
+
+    let reqConf = {
+        method: 'POST',
+        body: JSON.stringify( datos ),
+        headers
+    }
+
+    fetch('php/send_mail.php', reqConf)
+    .then(res => console.log(res))
+    .then(res => res.json())
+    .catch(error => console.error('Error:', error))
+    .then(response => {
+        if( !response || !response.ok ) alert('Error');
+
+        if (response.respuesta){
+            console.log(response.respuesta);
+            alert('¡Mensaje enviado!');
+            document.getElementById("formContacto").reset();
+        } else {
+            alert('Hubo un problema al enviar su mensaje');
+        };
+
+      btnEnvia.classList.remove('disabled');
+    });
+  }
