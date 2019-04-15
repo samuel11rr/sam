@@ -93,13 +93,22 @@ let aboutContainer = document.getElementById('about-container');
 
 if (anchoPantalla > 600) aboutContainer.classList.add('valign-wrapper');
 
+
+/******************************************
+ * REDIMENSIONAMOS LOS ELEMENTOS CUANDO HAYA CAMBIOS EN EL TAMAÑO DE LA PANTALLA
+ *****************************************/
+
 window.addEventListener('resize', () => {
     anchoPantalla = window.innerWidth;
+    
     if (anchoPantalla > 600) {
         aboutContainer.classList.add('valign-wrapper');
     } else {
         aboutContainer.classList.remove('valign-wrapper');
     }
+
+    altura = window.innerHeight-56;
+    plxElement.style.height = altura+'px';
 })
 
 
