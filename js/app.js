@@ -252,7 +252,9 @@ function sendMessage(){
         headers
     }
 
-    fetch('php/send_mail.php', reqConf)
+    let url = 'https://www.samuel-ramirez.com/php/send_mail.php';
+
+    fetch(url, reqConf)
     .then(res => console.log(res))
     .then(res => res.json())
     .catch(error => console.error('Error:', error))
