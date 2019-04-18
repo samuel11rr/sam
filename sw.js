@@ -82,6 +82,7 @@ self.addEventListener( 'fetch', e => {
 
     let respuesta;
 
+    // esto no lo vamos a guardar en cache por que debe ser dinamico
     if ( e.request.url.includes('/php/') ) {
         
         // return respuesta????
