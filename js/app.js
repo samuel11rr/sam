@@ -287,14 +287,16 @@ function sendMessage(){
     let contactURL = 'https://www.samuel-ramirez.com/php/send_mail.php';
 
     fetch(contactURL, reqConf)
-    .then(res => console.log(res))
-    .then(res => res.json())
-    .catch(error => console.error('Error:', error))
-    .then(response => {
-        if( !response || !response.ok ) alert('Error');
+    .then(res => {
+        if (!res.ok) alert('Error!');
 
-        if (response.respuesta){
-            console.log(response.respuesta);
+        return res.json();
+    })
+    // .then(res => res.json())
+    // .then(resJSON => console.log(resJSON))
+    .then(resJSON => {
+        if (resJSON.respuesta){
+            console.log(resJSON.respuesta);
             alert('¡Mensaje enviado!');
             document.getElementById("formContacto").reset();
         } else {
@@ -302,7 +304,8 @@ function sendMessage(){
         };
 
       btnEnvia.classList.remove('disabled');
-    });
+    })
+    .catch(error => console.error('Error:', error));
   }
 
 

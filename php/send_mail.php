@@ -1,4 +1,7 @@
 <?php
+	// header('Access-Control-Allow-Origin: *');
+	// header('Access-Control-Allow-Headers: *');
+
 	$datos_str = file_get_contents('php://input');
 	$datos_obj = json_decode( $datos_str );
 
