@@ -354,7 +354,7 @@ function cambioRed() {
 
 }
 
-// cambioRed();
+cambioRed();
 
 
 function timeout(ms, promise) {
