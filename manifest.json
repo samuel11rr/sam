@@ -1,25 +1,31 @@
 {
   "short_name": "SamuelR",
   "name": "Samuel Ramírez - Web Developer",
+  "description": "Aplicación de contacto para desarrollo web",
   "icons": [
     {
-      "src": "img/favicon.png",
+      "src": "img/app-icons/icon-48x48-circle.png",
       "type": "image/png",
       "sizes": "48x48"
     },
     {
-      "src": "img/favicon.png",
+      "src": "img/app-icons/icon-96x96-circle.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "img/favicon.png",
+      "src": "img/app-icons/icon-144x144-circle.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "img/app-icons/icon-192x192-circle.png",
       "type": "image/png",
       "sizes": "192x192"
     }
   ],
   "start_url": "/",
-  "background_color": "#000000",
+  "background_color": "#2c5167",
   "display": "standalone",
-  "theme_color": "#000000"
+  "theme_color": "#2c5167"
 }
