@@ -2,6 +2,37 @@
 
 
 /******************************************
+ * INICIALIZACIÓN DEL SW
+ *****************************************/
+var url = window.location.href;
+var swLocation = '/sw.js'; //solo para github
+
+var swReg;
+
+if ( navigator.serviceWorker ) {
+    if ( url.includes('127.0.0.0') || url.includes('localhost') ) {
+        // swLocation = '/sw.js';
+        console.log('en desarrollo');
+    }
+
+    if ( url.includes('github') ) {
+        swLocation = '/sam/sw.js';
+        console.log('demo');
+    }
+
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register( swLocation ).then( function(reg){
+            swReg = reg;
+
+            // suscripciones para notificaciones push
+            // swReg.pushManager.getSubscription().then( verificaSuscripcion );
+        });
+    });
+}
+
+
+
+/******************************************
  * ESTA SECCIÓN CAMBIA EL TEXTO PRINCIPAL
  *****************************************/
 let contadorTexto = 0;
@@ -235,8 +266,9 @@ function contadorTazas( iteracion=0 ){
 /******************************************
  * FORMULARIO DE CONTACTO
  *****************************************/
+let btnEnvia = document.getElementById('btnEnvia');
+
 function sendMessage(){
-    let btnEnvia = document.getElementById('btnEnvia');
     btnEnvia.classList.add('disabled');
 
     let datos = {
@@ -252,9 +284,9 @@ function sendMessage(){
         headers
     }
 
-    let url = 'https://www.samuel-ramirez.com/php/send_mail.php';
+    let contactURL = 'https://www.samuel-ramirez.com/php/send_mail.php';
 
-    fetch(url, reqConf)
+    fetch(contactURL, reqConf)
     .then(res => console.log(res))
     .then(res => res.json())
     .catch(error => console.error('Error:', error))
@@ -272,3 +304,65 @@ function sendMessage(){
       btnEnvia.classList.remove('disabled');
     });
   }
+
+
+
+
+/******************************************
+ * DETECTAR CAMBIOS DE CONEXION
+ *****************************************/
+function isOnline() {
+
+    if ( navigator.onLine ) {
+        // tenemos conexión
+        console.log('online');
+        btnEnvia.classList.remove('disabled');
+        btnEnvia.innerHTML='Enviar <i class="mdi mdi-send"></i>';
+    } else{
+        // No tenemos conexión
+        console.log('sin conexion');
+        btnEnvia.classList.add('disabled');
+        btnEnvia.innerHTML='Sin conexion <i class="mdi mdi-wifi-off"></i>';
+    }
+
+}
+
+window.addEventListener('online', isOnline );
+window.addEventListener('offline', isOnline );
+
+isOnline();
+
+
+// detectamos cuando se conecte con la red movil
+navigator.connection.addEventListener('change', cambioRed);
+
+function cambioRed() {
+  if ( navigator.connection.type ==='cellular' ) {
+      console.log('celular');
+  }
+
+  timeout(1000, fetch('https://www.samuel-ramirez.com/php/test_connection.php')).then(function(response) {
+    // console.log(response);
+    btnEnvia.classList.remove('disabled');
+    btnEnvia.innerHTML='Enviar <i class="mdi mdi-send"></i>';
+
+  }).catch(function(error) {
+    // console.log(error);
+    btnEnvia.classList.add('disabled');
+    btnEnvia.innerHTML='Sin conexion <i class="mdi mdi-wifi-off"></i>';
+  });
+
+}
+
+// cambioRed();
+
+
+function timeout(ms, promise) {
+    return new Promise(function(resolve, reject) {
+      setTimeout(function() {
+        reject(new Error("timeout"))
+      }, ms)
+      promise.then(resolve, reject)
+    })
+  }
+  
