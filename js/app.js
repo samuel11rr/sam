@@ -342,19 +342,18 @@ navigator.connection.addEventListener('change', cambioRed);
 function cambioRed() {
   if ( navigator.connection.type ==='cellular' ) {
       console.log('celular');
+
+      timeout(1000, fetch('https://www.samuel-ramirez.com/php/test_connection.php')).then(function(response) {
+        // console.log(response);
+        btnEnvia.classList.remove('disabled');
+        btnEnvia.innerHTML='Enviar <i class="mdi mdi-send"></i>';
+    
+      }).catch(function(error) {
+        // console.log(error);
+        // btnEnvia.classList.add('disabled');
+        btnEnvia.innerHTML='Verifica tu conexión <i class="mdi mdi-wifi-off"></i>';
+      });
   }
-
-  timeout(1000, fetch('https://www.samuel-ramirez.com/php/test_connection.php')).then(function(response) {
-    // console.log(response);
-    btnEnvia.classList.remove('disabled');
-    btnEnvia.innerHTML='Enviar <i class="mdi mdi-send"></i>';
-
-  }).catch(function(error) {
-    // console.log(error);
-    btnEnvia.classList.add('disabled');
-    btnEnvia.innerHTML='Sin conexion <i class="mdi mdi-wifi-off"></i>';
-  });
-
 }
 
 cambioRed();
