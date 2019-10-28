@@ -54,328 +54,395 @@
     
     <meta name="msapplication-TileColor" content="#2c5167">
     <meta name="msapplication-TileImage" content="img/app-icons/icon-192x192.png">
-</head>
+  </head>
 
   <body class="grey lighten-2">
-        <a name="home" id="home"></a>
-        <header>
-            <div class="navbar-fixed">
-                <nav class="black">
-                    <div class="nav-wrapper container">
-                        <a href="#home" class="brand-logo">
-                            <img src="img/favicon.png" width="20em" class="hide-on-small-only">
-                            <span style="font-weight: lighter; font-variant: small-caps">SamuelR</span>
-                        </a>
-                        <a href="#" data-target="mobile-nav" class="right sidenav-trigger"><span class="mdi mdi-menu"></span></a>
-                        <ul class="right hide-on-med-and-down">
-                            <li class="waves-effect waves-light opt-menu"><a href="#home">Home</a></li>
-                            <li class="waves-effect waves-light opt-menu"><a href="#about-me">Acerca de mí</a></li>
-                            <li class="waves-effect waves-light opt-menu"><a href="#recent-projects">Proyectos recientes</a></li>
-                            <li class="waves-effect waves-light opt-menu"><a href="#contact">Contacto</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+    <!-- <div id="app"> -->
+      <a name="home" id="home"></a>
 
-            <ul class="sidenav right-align grey darken-4" id="mobile-nav">
-                <li class="center white-text">
-                    <span style="font-weight: lighter; font-variant: small-caps; font-size: 1.5em">SamuelR</span>
-                </li>
-                <li>
-                    <a href="#home" class="sidenav-close white-text waves-effect waves-light">
-                        <span style="font-weight: normal">Home <i class="mdi mdi-home" style="margin-left: 1em"></i></span>
+      <header>
+        <div class="navbar-fixed">
+            <nav class="black">
+                <div class="nav-wrapper container">
+                    <a href="#home" class="brand-logo">
+                        <img src="img/favicon.png" width="20em" class="hide-on-small-only">
+                        <span style="font-weight: lighter; font-variant: small-caps">SamuelR</span>
                     </a>
-                </li>
-                <li>
-                    <a href="#about-me" class="sidenav-close white-text waves-effect waves-light">
-                        <span style="font-weight: normal">Acerca de mí <i class="mdi mdi-account-card-details" style="margin-left: 1em"></i></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#recent-projects" class="sidenav-close white-text waves-effect waves-light">
-                        <span style="font-weight: normal">Proyectos recientes <i class="mdi mdi-cellphone-link" style="margin-left: 1em"></i></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact" class="sidenav-close white-text waves-effect waves-light">
-                        <span style="font-weight: normal">Contacto <i class="mdi mdi-email" style="margin-left: 1em"></i></span>
-                    </a>
-                </li>
-            </ul>
-        </header>
-
-        <main>
-            <div class="parallax-container" id="parallax-principal">
-                <div class="valign-wrapper header-global">
-                    <div id="particles-js" class="header-particles"></div>
-
-                    <div class="container center" id="encabezado">
-                        <h1 class="white-text h1-sm" id="iam">Soy <strong id="textoPrincipal"></strong><span class="txtCursor">|</span> </h1>
-                    </div>
+                    <a href="#" data-target="mobile-nav" class="right sidenav-trigger"><span class="mdi mdi-menu"></span></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li class="waves-effect waves-light opt-menu"><a href="#home">Home</a></li>
+                        <li class="waves-effect waves-light opt-menu"><a href="#about-me">Acerca de mí</a></li>
+                        <li class="waves-effect waves-light opt-menu"><a href="#recent-projects">Proyectos recientes</a></li>
+                        <li class="waves-effect waves-light opt-menu"><a href="#contact">Contacto</a></li>
+                    </ul>
                 </div>
-                
-                <div class="parallax"><img src="img/bg/w9.jpg" style="filter:brightness(30%)"></div>
+            </nav>
+        </div>
+
+        <ul class="sidenav right-align grey darken-4" id="mobile-nav">
+            <li class="center white-text">
+                <span style="font-weight: lighter; font-variant: small-caps; font-size: 1.5em">SamuelR</span>
+            </li>
+            <li>
+                <a href="#home" class="sidenav-close white-text waves-effect waves-light">
+                    <span style="font-weight: normal">Home <i class="mdi mdi-home" style="margin-left: 1em"></i></span>
+                </a>
+            </li>
+            <li>
+                <a href="#about-me" class="sidenav-close white-text waves-effect waves-light">
+                    <span style="font-weight: normal">Acerca de mí <i class="mdi mdi-account-card-details" style="margin-left: 1em"></i></span>
+                </a>
+            </li>
+            <li>
+                <a href="#recent-projects" class="sidenav-close white-text waves-effect waves-light">
+                    <span style="font-weight: normal">Proyectos recientes <i class="mdi mdi-cellphone-link" style="margin-left: 1em"></i></span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="sidenav-close white-text waves-effect waves-light">
+                    <span style="font-weight: normal">Contacto <i class="mdi mdi-email" style="margin-left: 1em"></i></span>
+                </a>
+            </li>
+        </ul>
+      </header>
+
+      <main>
+        <div class="parallax-container" id="parallax-principal">
+          <div class="valign-wrapper header-global">
+            <div id="particles-js" class="header-particles no-selection"></div>
+
+            <div class="container center no-selection" id="encabezado">
+              <h1 class="white-text h1-sm no-selection" id="iam">
+                Soy <strong id="textoPrincipal"></strong><span class="txtCursor">|</span>
+              </h1>
             </div>
+          </div>
+          
+          <div class="parallax"><img src="img/bg/bg1-small.jpg" style="filter:brightness(50%)"></div>
+        </div>
 
-            <!-- About me -->
-            <a name="about-me" id="about-me"></a>
-            <div class="section grey darken-4">
+        <!-- About me -->
+        <a name="about-me" id="about-me"></a>
+        <div class="section grey darken-4">
 
-                <div class="espacio"></div> 
-                
-                <div class="container">
-                    <div class="row" id="about-container">
-                        <div class="col s8 offset-s2 m5 l4">
-                            <img src="img/pp.jpg" class="responsive-img circle" style="filter:grayscale(50%)">
-                        </div>
-
-                        <div class="col s12 m7 l8 grey-text text-lighten-1">
-                            <h3 style="font-weight: lighter; font-variant: small-caps">Acerca de mí</h3>
-                            <p>
-                                Mi nombre es Samuel Ramírez y soy Desarrollador Web.
-                                Tengo mas de 10 años maquetando y 4 programando. 
-                                Además de desarrollar con HTML5, CSS3, Javascript y PHP como tecnologías base,
-                                utilizo framworks como Angular, Vue.js, Node.js y Laravel.
-                            </p>
-                            <p>
-                                Actualmente trabajo en 
-                                <a  href="https://medicavial.com/" 
-                                    class="grey-text text-lighten-1 external-link" 
-                                    target="_blank">
-                                    MédicaVial
-                                    <i class="mdi mdi-open-in-new"></i>
-                                </a> 
-                                como desarrollador backend y frontend en distintos proyectos.
-                                A la par, soy desarrollador freelance.
-                            </p>
-                            <p>
-                                <a  class="social-link grey-text text-darken-1 waves-effect"
-                                    href="https://fernando-herrera.com/logros/#/samuel11rr@gmail.com" 
-                                    target="_blank">
-                                    <i class="mdi mdi-trophy mdi-36px"></i>
-                                </a>
-
-                                <a  class="social-link grey-text text-darken-1 waves-effect" 
-                                    href="https://github.com/samuel11rr" 
-                                    target="_blank">
-                                    <i class="mdi mdi-github-circle mdi-36px"></i>
-                                </a>
-
-                                <a  class="social-link grey-text text-darken-1 waves-effect" 
-                                    href="https://www.linkedin.com/in/samuel11rr/" 
-                                    target="_blank">
-                                    <i class="mdi mdi-linkedin-box mdi-36px"></i>
-                                </a>
-
-                                <a  class="social-link grey-text text-darken-1 waves-effect" 
-                                    href="https://www.instagram.com/samuel.codes/" 
-                                    target="_blank">
-                                    <i class="mdi mdi-instagram mdi-36px"></i>
-                                </a>
-
-                                <a  class="social-link grey-text text-darken-1 waves-effect" 
-                                    href="https://twitter.com/samus_rr" 
-                                    target="_blank">
-                                    <i class="mdi mdi-twitter mdi-36px"></i>
-                                </a>
-
-                                <a  class="social-link grey-text text-darken-1 waves-effect" 
-                                    href="https://www.facebook.com/Samuel.7RR" 
-                                    target="_blank">
-                                    <i class="mdi mdi-facebook-box mdi-36px"></i>
-                                </a>
-                                
-                            </p>
-                        </div>
+            <div class="espacio"></div> 
+            
+            <div class="container">
+                <div class="row" id="about-container">
+                    <div class="col s8 offset-s2 m5 l4">
+                        <img src="img/pp.jpg" class="responsive-img circle" style="filter:grayscale(50%)">
                     </div>
-                </div>
-            </div>
 
-            <div class="parallax-container valign-wrapper" id="contadores">
-                <div class="parallax"><img src="img/bg/1.jpg" style="filter: brightness(30%);"></div>
+                    <div class="col s12 m7 l8 grey-text text-lighten-1">
+                        <h3 style="font-weight: lighter; font-variant: small-caps">Acerca de mí</h3>
+                        <p>
+                            Mi nombre es Samuel Ramírez y soy Desarrollador Web.
+                            Tengo mas de 10 años maquetando y 4 programando. 
+                            Además de desarrollar con HTML5, CSS3, Javascript y PHP como tecnologías base,
+                            utilizo framworks como Angular, Vue.js, Node.js y Laravel.
+                        </p>
+                        <p>
+                            Actualmente trabajo en 
+                            <a  href="https://info.reprintsdesk.com/" 
+                                class="grey-text text-lighten-1 external-link" 
+                                target="_blank">
+                                Reprints Desk
+                                <i class="mdi mdi-open-in-new"></i>
+                            </a> 
+                            como fontend developer.
+                            A la par, soy desarrollador freelance.
+                        </p>
+                        <p>
+                          Procuro, además, mantenerme en constante aprendizaje tanto en nuevas tecnologías como en reforzar mis conocimientos.
+                        </p>
+                        <p>
+                            <a  class="social-link grey-text text-darken-1 waves-effect"
+                                href="https://fernando-herrera.com/logros/#/samuel11rr@gmail.com" 
+                                target="_blank">
+                                <i class="mdi mdi-trophy mdi-36px"></i>
+                            </a>
 
-                <div class="container">
-                    <div class="row white-text">
-                        <div class="col s6 m3 center hide-on-small-only">
-                            <h2><i class="mdi mdi-clock-outline"></i></h2>
-                            <h5 id="horas-trabajo">0</h5>
-                            <h6>Horas de trabajo</h6>
-                        </div>
+                            <a  class="social-link grey-text text-darken-1 waves-effect" 
+                                href="https://github.com/samuel11rr" 
+                                target="_blank">
+                                <i class="mdi mdi-github-circle mdi-36px"></i>
+                            </a>
 
-                        <div class="col s6 m3 center hide-on-small-only">
-                            <h2><i class="mdi mdi-laptop"></i></h2>
-                            <h5 id="proyectos-terminados">0</h5>
-                            <h6>Proyectos terminados</h6>
-                        </div>
+                            <a  class="social-link grey-text text-darken-1 waves-effect" 
+                                href="https://www.linkedin.com/in/samuel11rr/" 
+                                target="_blank">
+                                <i class="mdi mdi-linkedin-box mdi-36px"></i>
+                            </a>
 
-                        <div class="col s6 m3 center">
-                            <h2><i class="mdi mdi-code-tags"></i></h2>
-                            <h5 id="lineas-codigo">0</h5>
-                            <h6>Líneas de código</h6>
-                        </div>
+                            <a  class="social-link grey-text text-darken-1 waves-effect" 
+                                href="https://www.instagram.com/samuel.codes/" 
+                                target="_blank">
+                                <i class="mdi mdi-instagram mdi-36px"></i>
+                            </a>
 
-                        <div class="col s6 m3 center">
-                            <h2><i class="mdi mdi-coffee"></i></h2>
-                            <h5 id="tazas-cafe">0</h5>
-                            <h6>Tazas de café</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <a  class="social-link grey-text text-darken-1 waves-effect" 
+                                href="https://twitter.com/samus_rr" 
+                                target="_blank">
+                                <i class="mdi mdi-twitter mdi-36px"></i>
+                            </a>
 
-            <!-- Recent Projects -->
-            <a name="recent-projects" id="recent-projects"></a>
-            <div class="section grey darken-4">
-
-                <div class="espacio"></div> 
-                
-                <div class="container">
-                    <div class="row">
-                        <h3 style="font-weight: lighter; font-variant: small-caps" 
-                            class="grey-text text-lighten-1">
-                            Proyectos recientes
-                        </h3>
-                        <p class="grey-text text-lighten-1">Click para visualizar</p>
-
-                        <div class="col s12 m4">
-                            <div class="overlay-container">
-                                <img src="img/recent-projects/icbcristoviene.png" alt="Cristo Viene" class="overlay-image">
-                                <a href="https://www.icbcristoviene.org" target="_blank">
-                                    <div class="overlay-content">
-                                        <div class="overlay-text">ICB Cristo Viene</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col s12 m4">
-                            <div class="overlay-container">
-                                <img src="img/recent-projects/cinceladas.png" alt="Cinceladas por Cristo" class="overlay-image">
-                                <a href="https://www.icbcristoviene.org/cinceladasporcristo" target="_blank">
-                                    <div class="overlay-content">
-                                        <div class="overlay-text">Cinceladas por Cristo</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col s12 m4 hide-on-small-only">
-                            <div class="overlay-container">
-                                <img src="img/recent-projects/gyk-regalos.png" alt="Mesa de Regalos" class="overlay-image">
-                                <a href="http://gusykriss.hol.es/regalos" target="_blank">
-                                    <div class="overlay-content">
-                                        <div class="overlay-text">Mesa de Regalos</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col s12 m4 hide-on-small-only">
-                            <div class="overlay-container">
-                                <img src="img/recent-projects/medicavial.png" alt="Medica Vial" class="overlay-image">
-                                <a href="https://www.medicavial.com" target="_blank">
-                                    <div class="overlay-content">
-                                        <div class="overlay-text">Médica Vial</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col s12 m4 hide-on-small-only">
-                            <div class="overlay-container">
-                                <img src="img/recent-projects/buen-fin.png" alt="Buen Fin" class="overlay-image">
-                                <a href="http://www.medicavial.info/3/" target="_blank">
-                                    <div class="overlay-content">
-                                        <div class="overlay-text">Buen Fin 2018</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col s12 m4">
-                            <div class="overlay-container">
-                                <img src="img/recent-projects/merida-marathon.png" alt="Marathon Merida" class="overlay-image">
-                                <a href="http://www.medicavial.info/5/" target="_blank">
-                                    <div class="overlay-content">
-                                        <div class="overlay-text">Maratón Mérida</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <a name="contact" id="contact"></a>
-            <div class="parallax-container valign-wrapper">
-                <div class="parallax"><img src="img/bg/2.jpg" style="filter: brightness(15%)"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col s12">
-                            <h3 style="font-weight: lighter; font-variant: small-caps" 
-                                class="grey-text text-lighten-1">
-                                Contacto
-                            </h3>
+                            <a  class="social-link grey-text text-darken-1 waves-effect" 
+                                href="https://www.facebook.com/Samuel.7RR" 
+                                target="_blank">
+                                <i class="mdi mdi-facebook-box mdi-36px"></i>
+                            </a>
                             
-                            <form name="formulario" action="javascript:;" onsubmit="sendMessage(this)" id="formContacto">
-                                <div class="row">
-                                    <div class="input-field col s12 m6">
-                                        <i class="mdi mdi-pencil prefix white-text"></i>
-                                        <textarea id="icon_prefix2" class="materialize-textarea white-text" name="mensaje" required></textarea>
-                                        <label for="icon_prefix2">Mensaje</label>
-                                    </div>
-            
-                                    <div class="col s12 m6">
-                                        <div class="input-field">
-                                        <i class="mdi mdi-email prefix white-text"></i>
-                                        <input id="email" type="email" class="validate white-text" name="email" required>
-                                        <label for="email">Email</label>
-                                        </div>
-                                    </div>
-            
-                                    <div class="center">
-                                        <button class="btn waves-effect waves-light cyan darken-1" type="submit" name="action" id="btnEnvia">Enviar
-                                        <i class="mdi mdi-send right"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row grey-text text-lighten-1">
+                  <div class="col s12">
+                    <h4 style="font-weight: lighter; font-variant: small-caps">Mi experiencia laboral</h4>
+                  </div>
+
+                  <div class="col s12 m6 l4">
+                    <div class="container center">
+                      <a href="https://info.reprintsdesk.com" target="_blank" rel="noopener noreferrer">
+                        <img src="img/logos/rpd.png" alt="darsis" class="responsive-img" style="filter: opacity(70%);">
+                      </a>
+                    </div>
+
+                    <div class="center">
+                      <h6>Frontend developer</h6>
+                      <strong>2019</strong>
+                      <p>
+                        Desarrollo de herramientas enfocadas a ciencia y biotecnología.
+                        Especial atención en responsividad, compatibilidad entre distintos navegadores, consistencia en UI, y buenas prácticas de programación.
+                      </p>
+                    </div>
+                    <div class="espacio"></div> 
+                  </div>
+
+                  <div class="col s12 m6 l4">
+                    <div class="container center">
+                      <a href="https://medicavial.com" target="_blank" rel="noopener noreferrer">
+                        <img src="img/logos/mv.png" alt="darsis" class="responsive-img" style="filter: opacity(70%);">
+                      </a>
+                    </div>
+
+                    <div class="center">
+                      <h6>Analista de sistemas</h6>
+                      <strong>2016 - 2019</strong>
+                      <p>
+                        Desarrollo de herramientas medicas y administrativas.
+                        Planificación de bases de datos, desarrollo de APIs, implementación de tecnologías modernas para desarrollo.
+                      </p>
+                    </div>
+                    <div class="espacio"></div> 
+                  </div>
+
+                  <div class="col l4 hide-on-med-and-down show-on-large">
+                    <div class="container center">
+                      <a href="https://darsis.com.mx/" target="_blank" rel="noopener noreferrer">
+                        <img src="img/logos/darsis.png" alt="darsis" class="responsive-img" style="filter: opacity(70%);">
+                      </a>
+                    </div>
+
+                    <div class="center">
+                      <h6>Practicante</h6>
+                      <strong>2015</strong>
+                      <p>
+                        Desarrollo de landing pages, administración de ecommerce. Administración de sitios desarrollados con wordpress.
+                      </p>
+                    </div>
+                    <div class="espacio"></div> 
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax-container valign-wrapper" id="contadores">
+            <div class="parallax"><img src="img/bg/1.jpg" style="filter: brightness(30%);"></div>
+
+            <div class="container">
+                <div class="row white-text">
+                    <div class="col s6 m3 center hide-on-small-only">
+                        <h2><i class="mdi mdi-clock-outline"></i></h2>
+                        <h5 id="horas-trabajo">0</h5>
+                        <h6>Horas de trabajo</h6>
+                    </div>
+
+                    <div class="col s6 m3 center hide-on-small-only">
+                        <h2><i class="mdi mdi-laptop"></i></h2>
+                        <h5 id="proyectos-terminados">0</h5>
+                        <h6>Proyectos terminados</h6>
+                    </div>
+
+                    <div class="col s6 m3 center">
+                        <h2><i class="mdi mdi-code-tags"></i></h2>
+                        <h5 id="lineas-codigo">0</h5>
+                        <h6>Líneas de código</h6>
+                    </div>
+
+                    <div class="col s6 m3 center">
+                        <h2><i class="mdi mdi-coffee"></i></h2>
+                        <h5 id="tazas-cafe">0</h5>
+                        <h6>Tazas de café</h6>
                     </div>
                 </div>
             </div>
+        </div>
 
-        </main>
+        <!-- Recent Projects -->
+        <a name="recent-projects" id="recent-projects"></a>
+        <div class="section grey darken-4">
 
-
-        <footer class="page-footer black">
+            <div class="espacio"></div> 
+            
             <div class="container">
                 <div class="row">
-                    <div class="col l6 s12">
-                        <!-- <h5 class="white-text">Samuel Ramírez</h5> -->
-                        <!-- <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p> -->
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <!-- <h5 class="white-text">Links</h5>
-                        <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        </ul> -->
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container center-align grey-text text-darken-2">
-                    <small>
-                            &copy; <span id="copyright-text"></span>
-                    </small>
-                </div>
-            </div>
-        </footer>
+                    <h4 style="font-weight: lighter; font-variant: small-caps" 
+                        class="grey-text text-lighten-1">
+                        Proyectos recientes
+                    </h3>
+                    <p class="grey-text text-lighten-1">Click para visualizar</p>
 
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script src="js/particles.min.js"></script>
-    <script src="js/init.js"></script>
-    <script src="js/app.js"></script>
+                    <div class="col s12 m4">
+                        <div class="overlay-container">
+                            <img src="img/recent-projects/icbcristoviene.png" alt="Cristo Viene" class="overlay-image">
+                            <a href="https://www.icbcristoviene.org" target="_blank">
+                                <div class="overlay-content">
+                                    <div class="overlay-text">ICB Cristo Viene</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="overlay-container">
+                            <img src="img/recent-projects/cinceladas.png" alt="Cinceladas por Cristo" class="overlay-image">
+                            <a href="https://www.icbcristoviene.org/cinceladasporcristo" target="_blank">
+                                <div class="overlay-content">
+                                    <div class="overlay-text">Cinceladas por Cristo</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4 hide-on-small-only">
+                        <div class="overlay-container">
+                            <img src="img/recent-projects/gyk-regalos.png" alt="Mesa de Regalos" class="overlay-image">
+                            <a href="http://gusykriss.hol.es/regalos" target="_blank">
+                                <div class="overlay-content">
+                                    <div class="overlay-text">Mesa de Regalos</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4 hide-on-small-only">
+                        <div class="overlay-container">
+                            <img src="img/recent-projects/clinicas.png" alt="Clinicas Medica Vial" class="overlay-image">
+                            <a href="https://www.medicavial.info/clinicas" target="_blank">
+                                <div class="overlay-content">
+                                    <div class="overlay-text">Médica Vial</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4 hide-on-small-only">
+                        <div class="overlay-container">
+                            <img src="img/recent-projects/buen-fin.png" alt="Buen Fin" class="overlay-image">
+                            <a href="http://www.medicavial.info/3/" target="_blank">
+                                <div class="overlay-content">
+                                    <div class="overlay-text">Buen Fin 2018</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="overlay-container">
+                            <img src="img/recent-projects/merida-marathon.png" alt="Marathon Merida" class="overlay-image">
+                            <a href="http://www.medicavial.info/5/" target="_blank">
+                                <div class="overlay-content">
+                                    <div class="overlay-text">Maratón Mérida</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <a name="contact" id="contact"></a>
+        <div class="parallax-container valign-wrapper">
+            <div class="parallax"><img src="img/bg/2.jpg" style="filter: brightness(15%)"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h3 style="font-weight: lighter; font-variant: small-caps" 
+                            class="grey-text text-lighten-1">
+                            Contacto
+                        </h3>
+                        
+                        <form name="formulario" action="javascript:;" onsubmit="sendMessage(this)" id="formContacto">
+                            <div class="row">
+                                <div class="input-field col s12 m6">
+                                    <i class="mdi mdi-pencil prefix white-text"></i>
+                                    <textarea id="icon_prefix2" class="materialize-textarea white-text" name="mensaje" required></textarea>
+                                    <label for="icon_prefix2">Mensaje</label>
+                                </div>
+        
+                                <div class="col s12 m6">
+                                    <div class="input-field">
+                                    <i class="mdi mdi-email prefix white-text"></i>
+                                    <input id="email" type="email" class="validate white-text" name="email" required>
+                                    <label for="email">Email</label>
+                                    </div>
+                                </div>
+        
+                                <div class="center">
+                                    <button class="btn waves-effect waves-light cyan darken-1" type="submit" name="action" id="btnEnvia">Enviar
+                                    <i class="mdi mdi-send right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </main>
+
+      <footer class="page-footer black">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <!-- <h5 class="white-text">Samuel Ramírez</h5> -->
+                    <!-- <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p> -->
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <!-- <h5 class="white-text">Links</h5>
+                    <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align grey-text text-darken-2">
+                <small>
+                        &copy; <span id="copyright-text"></span>
+                </small>
+            </div>
+        </div>
+      </footer>
+
+      <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="js/particles.min.js"></script>
+      <script src="js/init.js"></script>
+      <script src="js/app.js"></script>
+    <!-- </div> -->
   </body>
 </html>

@@ -46,7 +46,6 @@ let repeticiones = 10;
 function cambiaTextoPrincipal(){
     if ( contadorTexto % 2 === 0 ) textoPrincipal( texto1 );
     if ( contadorTexto % 2 !== 0 ) textoPrincipal( texto2 );
-    
     contadorTexto++;
 }
 
@@ -97,8 +96,8 @@ function subtitulo(){
     let iam = document.getElementById('iam');
     let newiam = iam;
 
-    newiam.classList.add('animated', 'slideInUp');
-    subtitulo.classList.add('white-text', 'subtitulo', 'animated', 'slideInUp');
+    newiam.classList.add('animated', 'slideInUp', 'no-selection');
+    subtitulo.classList.add('white-text', 'subtitulo', 'animated', 'slideInUp', 'no-selection');
     subtitulo.innerHTML = 'Web Developer';
     
     encabezado.removeChild(iam);
@@ -368,3 +367,16 @@ function timeout(ms, promise) {
     })
   }
   
+
+/******************************************
+ * INICIALIZAMOS VUE
+ *****************************************/
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     message: 'Hello Vue!'
+//   },
+//   methods:{
+
+//   }
+// });
